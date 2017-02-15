@@ -1,0 +1,24 @@
+<md-sidenav-container class="demo-sidenav-container" fullscreen>
+  <md-toolbar color="primary">
+
+    <button md-icon-button (click)="sidenav.toggle()">
+      <md-icon>menu</md-icon>
+    </button>
+
+    <span class="example-fill-remaining-space"></span>
+
+    <button md-fab (click)="formShowing=!formShowing">
+      <md-icon>add</md-icon>
+    </button>
+  </md-toolbar>
+
+
+  <md-sidenav #sidenav mode="side" [align]="start">
+    <my-sidenav></my-sidenav>
+  </md-sidenav>
+
+
+  <h1></h1>
+  <my-tab></my-tab>
+
+</md-sidenav-container>
