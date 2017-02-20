@@ -10,7 +10,8 @@ import {MyFilterItem} from "../model/my-filter-item";
 
 @Component({
   selector: 'my-sidenav',
-  templateUrl: './sidenav.html'
+  templateUrl: './sidenav.html',
+  styleUrls:['../app.component.css']
 })
 
 export class SidenavComponent extends AComponent{

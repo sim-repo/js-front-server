@@ -56,4 +56,8 @@ export class NewsComponent extends AComponent{
 
   protected doHide() {
   }
+
+  runclick(){
+    alert('ok');
+  }
 }

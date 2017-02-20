@@ -1,7 +1,7 @@
+<button md-raised-button (click)="back()" class="simple-button"><i class="fa fa-arrow-circle-left"></i>назад</button>
 
-<a href="#" onclick="return false;" target="_blank" (click)="back()" class="back-click"><i class="fa fa-arrow-circle-left"></i>back</a>
+
 <div *ngIf="report">
-
   <div class="rep-common-style">
       <div class="card-container">
         <md-card class="md-card1">
@@ -41,15 +41,19 @@
                   <md-grid-tile-header>
                     <a href="#" onclick="return false;" (click)="sort(column)">
                       <div [ngSwitch]="isSorted(column)">
+                        <div  class="grid">
                         <div *ngSwitchCase="true"><i class="fa fa-caret-up" aria-hidden="true">{{column}}</i></div>
                         <div *ngSwitchCase="false"><i class="fa fa-caret-down" aria-hidden="true">{{column}}</i></div>
+                      </div>
                       </div>
                     </a>
                   </md-grid-tile-header>
                 </md-grid-tile>
                 <div *ngFor="let row of bufout | sort : this.sortCol: this.sortAsc | paginate: itemPerPage: currentPage ">
                   <md-grid-tile *ngFor="let val of row.data">
-                    <a href="#" onclick="return false;" (click)="edit(row)">{{val}}</a>
+                    <div class="cell">
+                      <a href="#" onclick="return false;" (click)="edit(row)">{{val}}</a>
+                    </div>
                   </md-grid-tile>
                 </div>
             </md-grid-list>

@@ -1,24 +1,23 @@
-<md-sidenav-container class="demo-sidenav-container" fullscreen>
-  <md-toolbar color="primary">
+<md-sidenav-container fullscreen >
 
+  <md-toolbar class="app-md-toolbar">
     <button md-icon-button (click)="sidenav.toggle()">
-      <md-icon>menu</md-icon>
+      <i class="material-icons md-24 md-pink">menu</i>
     </button>
+    <span><img src="../assets/img/logo.png" class="rounded float-left" alt="Responsive image"/></span>
+    <span class="app-toolbar-filler"></span>
+    <span> <img src="../assets/img/toolbar-wave3.jpg" width="800" height="180"/></span>
+   </md-toolbar>
 
-    <span class="example-fill-remaining-space"></span>
-
-    <button md-fab (click)="formShowing=!formShowing">
-      <md-icon>add</md-icon>
-    </button>
-  </md-toolbar>
-
-
-  <md-sidenav #sidenav mode="side" [align]="start">
+  <md-sidenav #sidenav mode="side" [align]="start" class="app-sidenav">
     <my-sidenav></my-sidenav>
   </md-sidenav>
 
+  <span class="app-content">
+    <my-tab></my-tab>
+  </span>
 
-  <h1></h1>
-  <my-tab></my-tab>
 
+  <md-toolbar class="app-md-toolbar-footer">
+  </md-toolbar>
 </md-sidenav-container>

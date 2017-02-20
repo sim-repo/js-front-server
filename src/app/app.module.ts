@@ -39,7 +39,7 @@ import {TabService} from "./tab/tab.service";
     FormsModule,
     HttpModule,
     JsonpModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
    // FlexLayoutModule,
     AdminModule,
     ApiModule,

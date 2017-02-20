@@ -2,10 +2,9 @@
   <div *ngIf="buffer">
     <div *ngIf="news">
       <div class="card-container">
-        <md-card *ngFor="let n of buffer">
+        <md-card *ngFor="let n of buffer" [routerLink]="['/news/one/'+n.id]">
           <md-card-title class="secondary">{{n.title}}</md-card-title>
-          <a [routerLink]="['/news/one/'+n.id]"routerLinkActive="active">[...]</a>
-          <router-outlet></router-outlet>`
+          <router-outlet></router-outlet>
         </md-card>
       </div>
     </div>

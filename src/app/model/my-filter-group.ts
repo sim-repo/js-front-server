@@ -5,6 +5,7 @@ export class MyFilterGroup{
   control_type: string;
   caption: string;
   model_field: string;
+  icon_class: string;
   items: Array<MyFilterItem>;
 }
 

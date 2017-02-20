@@ -3,13 +3,15 @@
   <div *ngIf="selectedFgroup">
     <div *ngFor="let g of selectedFgroup">
       <br>
-      <span md-line>{{g.caption}}</span>
+      <md-card>
+        <i class="material-icons md-18 md-grey-700">{{g.icon_class}}</i>
+      <span md-line class="app-menu-font">{{g.caption}}</span>
       <div [ngSwitch]="g.control_type">
           <div *ngSwitchCase="'checkbox'">
             <div *ngFor="let f of g.items">
               <md-checkbox  [(ngModel)]="f.enabled"
-                            (change)="saveAndEmit(f, $event.checked)">
-                {{f.value_caption}}
+                            (change)="saveAndEmit(f, $event.checked)" >
+                <span class="app-menu-item-font">{{f.value_caption}}</span>
               </md-checkbox>
             </div>
           </div>
@@ -46,6 +48,7 @@
         </div>
 
       </div>
+      </md-card>
     </div>
   </div>
 </md-nav-list>

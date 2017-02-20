@@ -1,7 +1,7 @@
 import {BackendURL} from "../model/backend-url";
 
-export const BACKEND_ROOT_LINK: String = 'http://localhost:8037/front/sync/get/json/log/';
-export const BACKEND_ROOT_LINK2: String = 'http://localhost:8037/front/sync/post/json/log/';
+export const BACKEND_ROOT_LINK: String = 'http://localhost:8080/front/sync/get/json/log/';
+export const BACKEND_ROOT_LINK2: String = 'http://localhost:8080/front/sync/post/json/log/';
 
 export enum URLs {
   NEWS = 0,
